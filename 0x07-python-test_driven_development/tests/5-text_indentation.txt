@@ -1,0 +1,94 @@
+>>> text_indentation("Hello   :     Holberton    ?    school.    fooo     ")
+Hello:
+<BLANKLINE>
+Holberton?
+<BLANKLINE>
+school.
+<BLANKLINE>
+fooo
+
+>>> text_indentation(".?:")
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+
+>>> text_indentation("    Holberton")
+Holberton
+
+>>> text_indentation("  ?  ")
+?
+<BLANKLINE>
+
+>>> text_indentation("?Hello.")
+?
+<BLANKLINE>
+Hello.
+<BLANKLINE>
+
+>>> text_indentation("?\n\n.\n\n:")
+?
+<BLANKLINE>
+<BLANKLINE>
+<BLANKLINE>
+.
+<BLANKLINE>
+<BLANKLINE>
+<BLANKLINE>
+:
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation(33)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation("        Holberton          ")
+Holberton
+
+>>> text_indentation("")
+<BLANKLINE>
+
+>>> text_indentation("      ")
+<BLANKLINE>
+
+>>> text_indentation("Hello: Holberton")
+Hello:
+<BLANKLINE>
+Holberton
+
+>>> text_indentation("      ?:  :  ")
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+:
+
+>>> text_indentation("\n")
+<BLANKLINE>
+
+>>> text_indentation("\n\n")
+<BLANKLINE>
+<BLANKLINE>
+
+>>> text_indentation("Hello\n\nWorld.")
+Hello
+<BLANKLINE>
+World.
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("Hello OpenAI")
+Hello OpenAI
+
+>>> text_indentation("OpenAI    is    amazing.")
+OpenAI is amazing.
+
+>>> text_indentation("Say something! Anything?")
+Say something!
+<BLANKLINE>
+Anything?

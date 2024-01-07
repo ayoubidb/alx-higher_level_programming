@@ -1,0 +1,29 @@
+>>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+# Matrix Multiplication with Different Content
+>>> m_a = [[2, 3], [4, 5]]
+>>> m_b = m_a
+>>> print(matrix_mul(m_a, m_b))
+[[14, 21], [28, 41]]
+
+# Matrix Multiplication with Another Size
+>>> m_a = [[1, 2, 3]]
+>>> m_b = [[4], [5], [6]]
+>>> print(matrix_mul(m_a, m_b))
+[[32]]
+
+# Matrix Multiplication with More Decimals
+>>> m_a = [[1.234, 5.678], [9.876, 4.321]]
+>>> m_b = [[5.432, 1.234], [3.210, 9.876]]
+>>> print(matrix_mul(m_a, m_b))
+[[35.904436, 46.319484], [77.425436, 68.639876]]
+
+# Combination of Integers and Floats (Different Content)
+>>> m_a = [[2, 3.3, 4], [5.5, 6, 7]]
+>>> m_b = [[1.1, 2, 3.3], [4, 5.5, 6], [7, 8, 9], [10.01, 11, 12.3]]
+>>> print(matrix_mul(m_a, m_b))
+[[71.1, 82.5, 94.4], [160.551, 188.8, 216.74]]
+
+# Minimum Two Arguments Required with Additional Argument
+>>> print(matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]], [[9, 10], [11, 12]]))
+# Raises TypeError
