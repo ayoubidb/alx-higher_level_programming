@@ -1,0 +1,18 @@
+# Import the BaseGeometry class
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
+bg = BaseGeometry()
+
+# Positive integer validation
+bg.integer_validator("my_int", 12)
+
+# Modified Negative integer validation (allowing 0)
+bg.integer_validator("number", -12)  # Raises ValueError: number must be greater than or equal to 0
+
+# Modified Validation with 3 arguments (assuming it's intentional)
+bg.integer_validator("numbers", 0, 1)
+
+# Modified Infinite integer validation (using a large number instead)
+bg.integer_validator("infnumber", 999999999999999999999999999999999999999999999999)
+
+# New Validation with a non-integer (float) value
+bg.integer_validator("float_number", 3.14)  # Raises ValueError: float_number must be an integer
